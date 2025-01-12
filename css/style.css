@@ -4,7 +4,7 @@
 }
 body {
   font-family: system-ui;
-  background-color: #f3f3f3;
+  background-color: #0c0c0c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,10 +12,10 @@ body {
   padding: 30px 10px;
 }
 .todo-app {
-  background-color: #fff;
+  background-color: #111;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px #0000001a;
+  box-shadow: 0 4px 6px #ffffff1a;
   width: 100%;
   max-width: 400px;
   text-align: center;
@@ -38,7 +38,7 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #111;
   border: 2px solid var(--main-color);
   bottom: -15px;
   z-index: 1;
@@ -58,10 +58,12 @@ body {
   flex: 1;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #818181;
   border-radius: 4px;
   outline: none;
+  color: #fff;
   transition: 0.3s;
+  background: transparent;
   caret-color: var(--second-color);
 }
 .input-container input:focus {
@@ -92,9 +94,10 @@ body {
   align-items: center;
   gap: 15px;
   padding: 10px;
+  color: #fff;
   margin-bottom: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background-color: #181818;
+  border: 1px solid #818181;
   border-radius: 4px;
   word-break: break-word;
   text-align: start;
