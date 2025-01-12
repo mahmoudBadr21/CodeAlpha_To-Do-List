@@ -1,0 +1,119 @@
+:root {
+  --main-color: #007bff;
+  --second-color: #0056b3;
+}
+body {
+  font-family: system-ui;
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+  padding: 30px 10px;
+}
+.todo-app {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px #0000001a;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+.todo-app h2 {
+  margin: 0 auto 35px;
+  color: var(--main-color);
+  position: relative;
+  width: fit-content;
+  display: block;
+}
+.todo-app h2::before,
+.todo-app h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.todo-app h2::before{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid var(--main-color);
+  bottom: -15px;
+  z-index: 1;
+}
+.todo-app h2::after {
+  width: 50%;
+  height: 2px;
+  bottom: -10px;
+  background-color: var(--main-color);
+}
+.todo-app .input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.3s;
+  caret-color: var(--second-color);
+}
+.input-container input:focus {
+  border-color: var(--second-color);
+}
+.input-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.input-container button:hover {
+  background-color: var(--second-color);
+}
+.todo-app ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.todo-app ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  word-break: break-word;
+  text-align: start;
+}
+.todo-app ul li .delete-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.todo-app ul li .delete-btn:hover {
+  background-color: #c0392b;
+}
+@media(max-width: 480px) {
+  .todo-app {
+    width: 90%;
+  }
+}
